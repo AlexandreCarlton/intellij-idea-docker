@@ -10,7 +10,7 @@ ARG IDEA_VERSION
 RUN apk add --update \
       curl \
       tar && \
-    curl https://download.jetbrains.com/idea/ideaIC-${IDEA_VERSION}.tar.gz \
+    curl --location https://download.jetbrains.com/idea/ideaIC-${IDEA_VERSION}.tar.gz \
     | tar --extract --gzip --directory=/opt && \
     mv /opt/idea-* /opt/idea && \
     apk del --purge \
