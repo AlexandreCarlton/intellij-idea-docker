@@ -4,7 +4,7 @@ FROM alpine:3.7
 RUN apk add --update \
       openjdk8 \
       ttf-dejavu \
-    && apk cache clean
+    && rm -rf /var/cache/apk/*
 
 ARG IDEA_VERSION
 RUN apk add --update \
